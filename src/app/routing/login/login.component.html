@@ -7,7 +7,6 @@
                     <mat-label>Login</mat-label>
                     <input matInput placeholder="Enter your login..." formControlName="login">
                     <mat-error *ngIf="this.form.controls['login'].invalid"> {{errorLoginRequired}}</mat-error>
-
                 </mat-form-field>
             </div>
             <div class="password">
@@ -15,16 +14,12 @@
                     <mat-label>Password</mat-label>
                     <input matInput placeholder="Enter your password..." [type]="hidePasswordEyeIcon ? 'password' : 'text'" formControlName="password">
                     <button mat-icon-button matSuffix (click)="hidePasswordEyeIcon = !hidePasswordEyeIcon" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hidePasswordEyeIcon">
-   <mat-icon>{{hidePasswordEyeIcon ? 'visibility_off' : 'visibility'}}</mat-icon>
- </button>
+   <mat-icon>{{hidePasswordEyeIcon ? 'visibility_off' : 'visibility'}}</mat-icon></button>
                     <mat-error *ngIf="this.form.controls['password'].invalid">{{errorPasswordRequired}}</mat-error>
-                    <!-- <mat-hint *ngIf="errorHint">Неверный логин или пароль</mat-hint> -->
-
+                    <mat-hint *ngIf="errorHint">Неверный логин или пароль</mat-hint>
                 </mat-form-field>
-
             </div>
             <button mat-stroked-button color="primary" [disabled]="form.invalid" class="btn">Login</button>
-
         </form>
     </div>
 </mat-card>

@@ -15,5 +15,9 @@ export class AdminComponent implements OnInit {
   }
   backToLogin(){
     this.router.navigate(['']);
+    localStorage.clear();
+  }
+  backToMainPage(){
+    this.router.navigate(['mainpage']);
   }
 }

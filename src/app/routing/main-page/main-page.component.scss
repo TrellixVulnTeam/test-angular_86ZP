@@ -1,4 +1,4 @@
-:host {
+.header {
     padding-top: 5px;
     width: 100%;
     display: flex;
@@ -8,4 +8,11 @@
     h1 {
         color: white;
     }
+}
+
+.admin-message{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

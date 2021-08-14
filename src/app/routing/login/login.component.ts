@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
 
   hidePasswordEyeIcon = true;
 
-  errorHint : boolean = true;
+  errorHint : boolean = false;
 
   
   private inittializeForm(): FormGroup{
@@ -45,11 +45,16 @@ export class LoginComponent implements OnInit {
       return 'Данное поле обязательно';
       } return this.form.controls['password'].hasError('password') ? 'Not a valid login' : 'Пароль должен быть от 8 символов';
     }
-
+    
     submit(){
       console.log(this.form);
       if(this.form.controls['login'].value == 'admin' && this.form.controls['password'].value == 'qwerty123'){
         this.router.navigate(['adminpage']);
+        this.errorHint = false;
+        localStorage.setItem('login', this.form.controls['login'].value);
+        localStorage.setItem('password', this.form.controls['password'].value);
+      }else{
+        this.errorHint = true;
       }
     }
   }
