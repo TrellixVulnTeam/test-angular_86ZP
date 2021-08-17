@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { LoginComponent } from '../login/login.component';
+
 
 @Component({
   selector: 'app-main-page',
