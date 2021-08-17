@@ -14,11 +14,14 @@ export class MainComponent implements OnInit {
   ngOnInit(): void {
   }
   
+
+
   nextPage(){
     if(localStorage.getItem('login') == 'admin'){
       this.router.navigate(['adminpage']);
       
       console.log(`Welcome ${localStorage.getItem('login')}`)
+      
     }else{    
 
     console.log('You are not logged in');

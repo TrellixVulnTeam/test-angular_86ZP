@@ -12,9 +12,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 
 
 import { AppComponent } from './app.component';
-import { LoginComponent } from './routing/login/login.component';
-import { AdminComponent } from './routing/admin-page/admin-page.component';
-import { MainComponent } from './routing/main-page/main-page.component';
+import { LoginComponent } from './routing/modules/login/login.component';
+import { AdminComponent } from './routing/modules/admin-page/admin-page.component';
+import { MainComponent } from './routing/modules/main-page/main-page.component';
 import {AppRoutingModule} from './app-routing.module';
 
 
